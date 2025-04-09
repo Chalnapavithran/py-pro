@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Analysis</title>
+</head>
+<body>
+    <h1>Habit Analysis</h1>
+
+    <h2>Habit Occurrences</h2>
+    <img src="data:image/png;base64,{{ plot_url }}" alt="Habit Analysis Plot">
+    
+    <h3>Habit Counts</h3>
+    <ul>
+        {% for habit, count in habit_count.items() %}
+        <li>{{ habit }}: {{ count }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/">Go Back to Habit Tracker</a>
+</body>
+</html>
